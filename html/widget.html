@@ -1,0 +1,51 @@
+<div id="team" class="p_content" ng-controller="widget_controller">
+
+	<div ng-controller="records_controller">
+		<h4 class="alert_info"><span ng-bind-html="text"></span><span style="float:right"><img ng-click="getNextRecord()" style="margin-top: -7px;margin-right: 7px;"src="images/right_arrow.svg"/></span></h4>
+	</div>
+	<article ng-if="categories[0]" class="module_content" style="margin:20px 2% 0 3%">
+		<div class="tabs"  style="margin:0px">
+			<div ng-repeat="category in categories">
+				<div  ng-class="category.active?'active':''"><a href="#{{category.link}}" >{{category.label}}</a></div>
+			</div>
+		</div>
+	</article>
+	<div class="tab_container" >
+		<div class="tab_content">
+			<article class="module width_full">
+
+				<header>
+					<div style="display:inline" >
+						<h3 style="display:inline-block;width:58%">{{title}}</h3> 
+						<div ng-include="'html/year_range_selector.html'"></div>
+					</div>
+				</header>
+
+				<div class="module_content" class="toggle" >
+
+					<div ng-include="'html/'+selector+'_selector.html'"></div>
+					<article ng-if="fields[0]" class="module_content" style="margin:0px 2% 30px 3%">
+						<div class="tabs"  style="margin:0px">
+							<div  ng-repeat="f in fields">
+								<div ng-class="field==f.field?'active':''"><a ng-click="changeDisplay(f.field)">{{f.label}}</a></div>
+							</div>
+						</div>
+					</article>
+
+
+					<article id="chart_div" style="width:400; height:600">
+						
+					</article> 
+				
+					<div class="clear"></div>
+				</div>
+	
+			</article>
+			<article class="module width_full">
+				<div class="module_content" id="table_div" >
+				</div>
+			</article>
+			<div class="clear" style="height:20px"></div>
+		</div>
+	</div>
+</div>

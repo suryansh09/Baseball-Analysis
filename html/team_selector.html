@@ -1,0 +1,35 @@
+<div style="display:inline;margin:10%" ng-controller="team_filter_controller" >
+
+	<span style="float:left">Select League</span>
+	<div
+		style="margin:10px"
+	    isteven-multi-select
+	    input-model="allLeagues"
+	    output-model="selectedLeagues"
+	    button-label="icon name"
+	    item-label="icon name"
+	    tick-property="ticked"
+	    on-item-click="onLeagueChange()"
+	    on-select-all="onLeagueChange()"
+    	on-select-none="onLeagueChange()"
+    	on-reset="onLeagueChange()"
+    	on-clear="onLeagueChange()"
+	>
+	</div>
+	<span>Select team</span>
+	<div
+		style="margin:10px"
+	    isteven-multi-select
+	    input-model="teams"
+	    output-model="selectedTeams"
+	    button-label="icon name"
+	    item-label="icon name"
+	    tick-property="ticked"
+	    on-item-click="onChange(selectedTeams)"
+	    on-select-all="onChange(selectedTeams)"
+    	on-select-none="onChange(selectedTeams)"
+    	on-reset="onChange(selectedTeams)"
+    	on-clear="onChange(selectedTeams)"
+	>
+	</div>
+</div>

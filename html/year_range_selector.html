@@ -1,0 +1,12 @@
+<div ng-controller="year_filter_controller">
+	<div style="display:inline-block;width:15%;margin-top:7px">	
+		<select style="width:92%;" ng-options="year for year in startYearRange" ng-model="startYear" ng-change="startYearChange()">
+		</select>
+	</div>
+	<div style="display:inline-block;width:15%;margin-top:7px">	
+		<select style="width:92%;" ng-options="year for year in endYearRange" ng-model="endYear" ng-change="endYearChange()">
+		</select>
+	</div>
+	<img style="display:inline-block;width:25px;margin-top:7px" ng-if="global.showLoading" src="images/loader1.gif" style="margin-left: 48%;" />
+
+</div>

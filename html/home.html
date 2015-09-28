@@ -1,0 +1,48 @@
+<div id="team" class="p_content" ng-controller="home_controller">
+
+	<div class="tab_container" >
+		<div class="tab_content">
+			<article class="module width_full">
+
+				<header>
+					<div style="display:inline" >
+						<h3 style="display:inline-block;width:60%">Details about the Application</h3> 
+					</div>
+				</header>
+
+				<div class="module_content" class="toggle" >
+
+					<article  style="width:400; height:600">
+						<p><h3>Baseball is one of the most loved and watched game in United States of America. The fans of the game are always keen to know everything about their favorite teams and players.</h3>
+						</p>
+						<div>
+							<b>“Insight into Baseball History”</b> serves as a great platform, not only for viewer's interest but also for strategist to do statistical analysis of different aspects of the game. The basic functionality of the application is to perform statistical analysis of decades of baseball data of major Leagues like American League and National League and provide user friendly interface that represent data using Graphs, Charts and Tables.
+						</div>
+						<br/>
+						<div>
+							Baseball is a game of numbers and fans are always interested to know more and more about the game, teams, players, managers and so on. These figures may prove helpful to understand a particular game, about a particular player, team or season, However over the period of time and year by year accumulation of data, makes it almost impossible to come to a logical conclusion about the game and trends followed all through these years.
+						</div>
+						<br/>
+						<div>
+							This application is focused on providing logical interpretations and future trends from the historical, demographic and in-depth game data about Teams, Players and Managers.
+						</div>
+						
+						<div ng-if="show">
+						<h2></h2>
+							<h4>
+							Our database contains information about all people involved in the sport since <b>1980</b> to <b>2014</b>. The information about their performances is recored yearly.
+							We have total <b>{{totalRecords}}</b> records, distributed in <b>9</b> tables. This application analyses data of <b>{{players}}</b> players, <b>{{teams}}</b> teams and <b>{{managers}}</b> managers. 
+							</h4>
+						</div>
+						
+					</article>
+				
+					<div class="clear"></div>
+				</div>
+	
+			</article>
+			
+			<div class="clear" style="height:20px"></div>
+		</div>
+	</div>
+</div>

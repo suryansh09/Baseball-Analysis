@@ -1,0 +1,20 @@
+<div style="display:inline;margin:10%" ng-controller="person_filter_controller" >
+
+	<div
+		style="margin:10px"
+	    isteven-multi-select
+	    input-model="players"
+	    output-model="selectedPlayers"
+	    button-label="name"
+	    item-label="name"
+	    tick-property="ticked"
+	    on-item-click="onChange(selectedPlayers)"
+	    on-select-all="onChange(selectedPlayers)"
+    	on-select-none="onChange(selectedPlayers)"
+    	on-reset="onChange(selectedPlayers)"
+    	on-clear="onChange(selectedPlayers)"
+    	on-search-change="onSearchChange( data )"
+    	selection-mode="single"
+	>
+	</div>
+</div>
